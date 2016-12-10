@@ -3,12 +3,15 @@ version: 0.1
 environment_variables:
   plaintext:
     JAVA_HOME: "/usr/lib/jvm/java-8-openjdk-amd64"
-    
+
 phases:
   install:
     commands:
-      - echo Installing Maven...    
+      - echo Updating APT...    
       - apt-get update -y
+      - echo Installing Java...    
+      - apt-get install openjdk-8-jdk       
+      - echo Installing Maven...
       - apt-get install -y maven
   pre_build:
     commands:    
