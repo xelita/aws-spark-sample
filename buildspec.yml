@@ -8,7 +8,7 @@ phases:
   install:
     commands:
       - echo Updating APT...
-      - apt-get install python-software-properties -y
+      - apt-get install software-properties-common -y
       - add-apt-repository ppa:openjdk-r/ppa -y          
       - apt-get update -y
       - echo Installing Java...    
