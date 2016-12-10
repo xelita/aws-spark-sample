@@ -8,7 +8,8 @@ phases:
   install:
     commands:
       - echo Updating APT...
-      - add-apt-repository ppa:openjdk-r/ppa          
+      - apt-get install software-properties-common
+      - add-apt-repository ppa:openjdk-r/ppa -y          
       - apt-get update -y
       - echo Installing Java...    
       - apt-get install openjdk-8-jdk       
