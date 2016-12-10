@@ -13,9 +13,9 @@ phases:
       - add-apt-repository ppa:openjdk-r/ppa -y          
       - apt-get update -y
       - echo Installing Java...    
-      - apt-get install openjdk-8-jdk       
+      - apt-get install openjdk-8-jdk -y     
       - echo Installing Maven...
-      - apt-get install -y maven
+      - apt-get install maven -y
   pre_build:
     commands:    
       - echo Logging in to Amazon ECR...
